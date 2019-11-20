@@ -9,19 +9,31 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var PropTypes = require("prop-types");
 var React = require("react");
+var react_native_1 = require("react-native");
+var react_native_svg_1 = require("react-native-svg");
+var server_1 = require("react-dom/server");
 var avatar_1 = require("./avatar");
 var options_1 = require("./options");
-var avatar_2 = require("./avatar");
-exports.Avatar = avatar_2.default;
-exports.AvatarStyle = avatar_2.AvatarStyle;
-var options_2 = require("./options");
-exports.Option = options_2.Option;
-exports.OptionContext = options_2.OptionContext;
-exports.allOptions = options_2.allOptions;
-var piece_1 = require("./avatar/piece");
 var AvatarComponent = /** @class */ (function (_super) {
     __extends(AvatarComponent, _super);
     function AvatarComponent() {
@@ -59,40 +71,41 @@ var AvatarComponent = /** @class */ (function (_super) {
     };
     return AvatarComponent;
 }(React.Component));
-exports.default = AvatarComponent;
-var Piece = /** @class */ (function (_super) {
-    __extends(Piece, _super);
-    function Piece(props) {
-        var _this = _super.call(this, props) || this;
-        _this.optionContext = new options_1.OptionContext(options_1.allOptions);
-        _this.updateOptionContext(_this.props);
-        return _this;
-    }
-    Piece.prototype.getChildContext = function () {
-        return { optionContext: this.optionContext };
-    };
-    Piece.prototype.componentWillReceiveProps = function (nextProps) {
-        this.updateOptionContext(nextProps);
-    };
-    Piece.prototype.render = function () {
-        var _a = this.props, avatarStyle = _a.avatarStyle, style = _a.style, pieceType = _a.pieceType, pieceSize = _a.pieceSize, viewBox = _a.viewBox;
-        return React.createElement(piece_1.default, { avatarStyle: avatarStyle, style: style, pieceType: pieceType, pieceSize: pieceSize, viewBox: viewBox });
-    };
-    Piece.prototype.updateOptionContext = function (props) {
-        var data = {};
-        for (var _i = 0, allOptions_2 = options_1.allOptions; _i < allOptions_2.length; _i++) {
-            var option = allOptions_2[_i];
-            var value = props[option.key];
-            if (!value) {
-                continue;
-            }
-            data[option.key] = value;
-        }
-        this.optionContext.setData(data);
-    };
-    Piece.childContextTypes = {
-        optionContext: PropTypes.instanceOf(options_1.OptionContext)
-    };
-    return Piece;
-}(React.Component));
-exports.Piece = Piece;
+// class Piece extends React.Component<Props> {
+//   static childContextTypes = {
+//     optionContext: PropTypes.instanceOf(OptionContext)
+//   }
+//   private optionContext: OptionContext = new OptionContext(allOptions)
+//   getChildContext () {
+//     return { optionContext: this.optionContext }
+//   }
+//   constructor (props: Props) {
+//     super(props)
+//     this.updateOptionContext(this.props)
+//   }
+//   componentWillReceiveProps (nextProps: Props) {
+//     this.updateOptionContext(nextProps)
+//   }
+//   render () {
+//     const { avatarStyle, style, pieceType, pieceSize, viewBox } = this.props
+//     return <PieceComponent avatarStyle={avatarStyle as AvatarStyle} style={style} pieceType={pieceType} pieceSize={pieceSize} viewBox={viewBox}/>
+//   }
+//   private updateOptionContext (props: Props) {
+//     const data: { [index: string]: string } = {}
+//     for (const option of allOptions) {
+//       const value = props[option.key]
+//       if (!value) {
+//         continue
+//       }
+//       data[option.key] = value
+//     }
+//     this.optionContext.setData(data)
+//   }
+// }
+exports.AvatarReactNativeSvg = function (_a) {
+    var size = _a.size, childProps = __rest(_a, ["size"]);
+    return (React.createElement(react_native_svg_1.SvgXml, { xml: server_1.default.renderToString(React.createElement(AvatarComponent, __assign({ style: {
+                width: react_native_1.PixelRatio.getPixelSizeForLayoutSize(size),
+                height: react_native_1.PixelRatio.getPixelSizeForLayoutSize(size),
+            }, avatarStyle: "Circle" }, childProps))), width: size, height: size }));
+};
