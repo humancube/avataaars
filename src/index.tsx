@@ -2,7 +2,7 @@ import * as PropTypes from 'prop-types'
 import * as React from 'react'
 import { PixelRatio } from 'react-native'
 import { SvgXml } from 'react-native-svg'
-import ReactDOMServer from 'react-dom/server'
+import * as ReactDOMServer from 'react-dom/server'
 
 import Avatar, { AvatarStyle } from './avatar'
 import { OptionContext, allOptions } from './options'

@@ -31,7 +31,7 @@ var PropTypes = require("prop-types");
 var React = require("react");
 var react_native_1 = require("react-native");
 var react_native_svg_1 = require("react-native-svg");
-var server_1 = require("react-dom/server");
+var ReactDOMServer = require("react-dom/server");
 var avatar_1 = require("./avatar");
 var options_1 = require("./options");
 var AvatarComponent = /** @class */ (function (_super) {
@@ -104,7 +104,7 @@ var AvatarComponent = /** @class */ (function (_super) {
 // }
 exports.AvatarReactNativeSvg = function (_a) {
     var size = _a.size, childProps = __rest(_a, ["size"]);
-    return (React.createElement(react_native_svg_1.SvgXml, { xml: server_1.default.renderToString(React.createElement(AvatarComponent, __assign({ style: {
+    return (React.createElement(react_native_svg_1.SvgXml, { xml: ReactDOMServer.renderToString(React.createElement(AvatarComponent, __assign({ style: {
                 width: react_native_1.PixelRatio.getPixelSizeForLayoutSize(size),
                 height: react_native_1.PixelRatio.getPixelSizeForLayoutSize(size),
             }, avatarStyle: "Circle" }, childProps))), width: size, height: size }));
