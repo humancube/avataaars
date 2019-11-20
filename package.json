@@ -1,6 +1,6 @@
 {
   "name": "@spalger/react-native-avataaars-svg",
-  "version": "1.2.1-reactnativesvgsupport",
+  "version": "1.2.1-reactnativesvgsupport1",
   "description": "React component for avataaars ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -8,8 +8,11 @@
     "react",
     "avatar"
   ],
-  "repository": "git@github.com:fangpenlin/avataaars.git",
+  "repository": "git@github.com:spalger/avataaars.git",
   "author": "Fang-Pen Lin <hello@fangpenlin.com>",
+  "maintainers": [
+    "Spencer Alger <email@spalger.com>"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "tsc"
