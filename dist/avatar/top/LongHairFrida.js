@@ -1,11 +1,8 @@
 "use strict";
 var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
     return function (d, b) {
         extendStatics(d, b);
         function __() { this.constructor = d; }
@@ -14,22 +11,22 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var lodash_1 = require("lodash");
+var unique_id_1 = require("../../unique_id");
 var facialHair_1 = require("./facialHair");
 var LongHairFrida = /** @class */ (function (_super) {
     __extends(LongHairFrida, _super);
     function LongHairFrida() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.filter1 = lodash_1.uniqueId('react-filter-');
-        _this.filter2 = lodash_1.uniqueId('react-filter-');
-        _this.filter3 = lodash_1.uniqueId('react-filter-');
-        _this.filter4 = lodash_1.uniqueId('react-filter-');
-        _this.filter5 = lodash_1.uniqueId('react-filter-');
-        _this.filter6 = lodash_1.uniqueId('react-filter-');
-        _this.filter7 = lodash_1.uniqueId('react-filter-');
-        _this.mask1 = lodash_1.uniqueId('react-mask-');
-        _this.path1 = lodash_1.uniqueId('react-path-');
-        _this.path2 = lodash_1.uniqueId('react-path-');
+        _this.filter1 = unique_id_1.uniqueId('react-filter-');
+        _this.filter2 = unique_id_1.uniqueId('react-filter-');
+        _this.filter3 = unique_id_1.uniqueId('react-filter-');
+        _this.filter4 = unique_id_1.uniqueId('react-filter-');
+        _this.filter5 = unique_id_1.uniqueId('react-filter-');
+        _this.filter6 = unique_id_1.uniqueId('react-filter-');
+        _this.filter7 = unique_id_1.uniqueId('react-filter-');
+        _this.mask1 = unique_id_1.uniqueId('react-mask-');
+        _this.path1 = unique_id_1.uniqueId('react-path-');
+        _this.path2 = unique_id_1.uniqueId('react-path-');
         return _this;
     }
     LongHairFrida.prototype.render = function () {

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import { uniqueId } from '../../unique_id'
 
 import FacialHair from './facialHair'
 

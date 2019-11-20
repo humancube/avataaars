@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { uniqueId } from 'lodash'
+import { uniqueId } from '../../../unique_id'
 
 export default class Prescription02 extends React.Component {
   static optionValue = 'Prescription02'
