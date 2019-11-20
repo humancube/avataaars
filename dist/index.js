@@ -32,7 +32,7 @@ var AvatarComponent = /** @class */ (function (_super) {
     AvatarComponent.prototype.getChildContext = function () {
         return { optionContext: this.optionContext };
     };
-    AvatarComponent.prototype.UNSAFE__componentWillMount = function () {
+    AvatarComponent.prototype.UNSAFE_componentWillMount = function () {
         this.updateOptionContext(this.props);
     };
     AvatarComponent.prototype.componentWillReceiveProps = function (nextProps) {

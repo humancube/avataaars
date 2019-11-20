@@ -30,7 +30,7 @@ export default class AvatarComponent extends React.Component<Props> {
     getChildContext(): {
         optionContext: OptionContext;
     };
-    UNSAFE__componentWillMount(): void;
+    UNSAFE_componentWillMount(): void;
     componentWillReceiveProps(nextProps: Props): void;
     render(): JSX.Element;
     private updateOptionContext;

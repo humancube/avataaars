@@ -36,7 +36,7 @@ var Selector = /** @class */ (function (_super) {
         enumerable: true,
         configurable: true
     });
-    Selector.prototype.UNSAFE__componentWillMount = function () {
+    Selector.prototype.UNSAFE_componentWillMount = function () {
         var _a = this.props, option = _a.option, defaultOption = _a.defaultOption;
         var optionContext = this.optionContext;
         var defaultValue = (typeof defaultOption === 'string' ?

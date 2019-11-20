@@ -11,7 +11,7 @@ export default class Selector extends React.Component<Props> {
         optionContext: PropTypes.Requireable<OptionContext>;
     };
     private readonly optionContext;
-    UNSAFE__componentWillMount(): void;
+    UNSAFE_componentWillMount(): void;
     componentWillUpdate(nextProps: Props & {
         children?: React.ReactNode;
     }): void;

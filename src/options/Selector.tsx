@@ -26,7 +26,7 @@ export default class Selector extends React.Component<Props> {
     return this.context.optionContext
   }
 
-  UNSAFE__componentWillMount () {
+  UNSAFE_componentWillMount () {
     const { option, defaultOption } = this.props
     const { optionContext } = this
     const defaultValue = (

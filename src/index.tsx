@@ -39,7 +39,7 @@ export default class AvatarComponent extends React.Component<Props> {
     return { optionContext: this.optionContext }
   }
 
-  UNSAFE__componentWillMount () {
+  UNSAFE_componentWillMount () {
     this.updateOptionContext(this.props)
   }
 
