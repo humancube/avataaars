@@ -23,11 +23,7 @@ function getComponentOptionValue(component) {
 var Selector = /** @class */ (function (_super) {
     __extends(Selector, _super);
     function Selector() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.optionContextUpdate = function () {
-            _this.forceUpdate();
-        };
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     Object.defineProperty(Selector.prototype, "optionContext", {
         get: function () {
@@ -41,7 +37,6 @@ var Selector = /** @class */ (function (_super) {
         var optionContext = this.optionContext;
         var defaultValue = (typeof defaultOption === 'string' ?
             defaultOption : getComponentOptionValue(defaultOption));
-        optionContext.addStateChangeListener(this.optionContextUpdate);
         optionContext.optionEnter(option.key);
         var optionState = optionContext.getOptionState(option.key);
         this.updateOptionValues();
@@ -53,7 +48,6 @@ var Selector = /** @class */ (function (_super) {
         this.updateOptionValues(nextProps);
     };
     Selector.prototype.componentWillUnmount = function () {
-        this.optionContext.removeStateChangeListener(this.optionContextUpdate);
         this.optionContext.optionExit(this.props.option.key);
     };
     Selector.prototype.render = function () {

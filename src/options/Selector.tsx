@@ -33,7 +33,6 @@ export default class Selector extends React.Component<Props> {
       typeof defaultOption === 'string' ?
       defaultOption : getComponentOptionValue(defaultOption)
     )
-    optionContext.addStateChangeListener(this.optionContextUpdate)
     optionContext.optionEnter(option.key)
     const optionState = optionContext.getOptionState(option.key)
     this.updateOptionValues()
@@ -47,7 +46,6 @@ export default class Selector extends React.Component<Props> {
   }
 
   componentWillUnmount () {
-    this.optionContext.removeStateChangeListener(this.optionContextUpdate)
     this.optionContext.optionExit(this.props.option.key)
   }
 
@@ -61,10 +59,6 @@ export default class Selector extends React.Component<Props> {
       }
     })
     return result
-  }
-
-  private optionContextUpdate = () => {
-    this.forceUpdate()
   }
 
   private updateOptionValues (
