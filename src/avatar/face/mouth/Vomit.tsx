@@ -78,7 +78,7 @@ export default class Vomit extends React.Component {
         <g id='Vomit-Stuff'>
           <use fill='#88C553' fillRule='evenodd' xlinkHref={'#' + path2} />
           <use
-            fill='black'
+            fill='#7FFF00'
             fillOpacity='1'
             filter={`url(#${filter1})`}
             xlinkHref={'#' + path2}

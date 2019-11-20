@@ -38,7 +38,7 @@ var Vomit = /** @class */ (function (_super) {
             React.createElement("rect", { id: 'Teeth', fill: '#FFFFFF', fillRule: 'evenodd', mask: "url(#" + mask1 + ")", x: '39', y: '0', width: '31', height: '16', rx: '5' }),
             React.createElement("g", { id: 'Vomit-Stuff' },
                 React.createElement("use", { fill: '#88C553', fillRule: 'evenodd', xlinkHref: '#' + path2 }),
-                React.createElement("use", { fill: 'black', fillOpacity: '1', filter: "url(#" + filter1 + ")", xlinkHref: '#' + path2 }))));
+                React.createElement("use", { fill: '#7FFF00', fillOpacity: '1', filter: "url(#" + filter1 + ")", xlinkHref: '#' + path2 }))));
     };
     Vomit.optionValue = 'Vomit';
     return Vomit;
