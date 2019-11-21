@@ -11,6 +11,7 @@ import { OptionContext, allOptions } from './options'
 
 export interface Props {
   avatarStyle: string
+  backgroundColor?: string
   style?: React.CSSProperties
   topType?: string
   accessoriesType?: string
@@ -48,8 +49,8 @@ class AvatarComponent extends React.Component<Props> {
   }
 
   render () {
-    const { avatarStyle, style } = this.props
-    return <Avatar avatarStyle={avatarStyle as AvatarStyle} style={style} />
+    const { avatarStyle, style, backgroundColor } = this.props
+    return <Avatar avatarStyle={avatarStyle as AvatarStyle} backgroundColor={backgroundColor} style={style} />
   }
 
   private updateOptionContext (props: Props) {
@@ -110,7 +111,6 @@ export const AvatarReactNativeSvg: React.SFC<Props & { size }> = ({ size, ...chi
           width: PixelRatio.getPixelSizeForLayoutSize(size),
           height: PixelRatio.getPixelSizeForLayoutSize(size),
         }}
-        avatarStyle="Circle"
         {...childProps}
       />,
     )}

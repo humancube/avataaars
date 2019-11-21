@@ -1,6 +1,7 @@
 import * as React from 'react';
 export interface Props {
     avatarStyle: string;
+    backgroundColor?: string;
     style?: React.CSSProperties;
     topType?: string;
     accessoriesType?: string;

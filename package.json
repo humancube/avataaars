@@ -1,6 +1,6 @@
 {
   "name": "@spalger/react-native-avataaars-svg",
-  "version": "1.2.1-reactnativesvgsupport2",
+  "version": "1.2.1-reactnativesvgsupport3",
   "description": "React component for avataaars ",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

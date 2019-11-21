@@ -51,8 +51,8 @@ var AvatarComponent = /** @class */ (function (_super) {
         this.updateOptionContext(nextProps);
     };
     AvatarComponent.prototype.render = function () {
-        var _a = this.props, avatarStyle = _a.avatarStyle, style = _a.style;
-        return React.createElement(avatar_1.default, { avatarStyle: avatarStyle, style: style });
+        var _a = this.props, avatarStyle = _a.avatarStyle, style = _a.style, backgroundColor = _a.backgroundColor;
+        return React.createElement(avatar_1.default, { avatarStyle: avatarStyle, backgroundColor: backgroundColor, style: style });
     };
     AvatarComponent.prototype.updateOptionContext = function (props) {
         var data = {};
@@ -107,5 +107,5 @@ exports.AvatarReactNativeSvg = function (_a) {
     return (React.createElement(react_native_svg_1.SvgXml, { xml: ReactDOMServer.renderToString(React.createElement(AvatarComponent, __assign({ style: {
                 width: react_native_1.PixelRatio.getPixelSizeForLayoutSize(size),
                 height: react_native_1.PixelRatio.getPixelSizeForLayoutSize(size),
-            }, avatarStyle: "Circle" }, childProps))), width: size, height: size }));
+            } }, childProps))), width: size, height: size }));
 };
